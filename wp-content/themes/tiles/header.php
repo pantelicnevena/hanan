@@ -90,23 +90,27 @@
             <div class="container">
                 <div class="col-md-9"></div>
                 <div class="col-md-3" style="margin-right: -10%;">
-
+		    <div class="col-md-3">
+                        <div class="text-center square-link" style="width: 38px; height: 38px; margin-bottom: 5%; margin-top: 5%;">
+                            <a href="http://adoralevin.com" target="_blank">
+                                <img src="http://localhost/web/hanan/wp-content/uploads/2015/07/logo-icon.png" alt="Home page"/>
+                            </a>
+                        </div>
+                    </div>
                     <div class="col-md-3">
                         <div class="text-center square-link" style="width: 38px; height: 38px; margin-bottom: 5%; margin-top: 5%;">
-                            <a href="mailto:hanan@adoralevin.com">
+                            <a href="mailto:hanan@adoralevin.com" target="_blank">
                                 <i class="fa fa-envelope fa-2x" style="margin-top: 9%;"></i>
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-1"></div>
                     <div class="col-md-3">
                         <div class="text-center square-link" style="width: 38px; height: 38px; margin-bottom: 5%; margin-top: 5%;">
-                            <a href="https://www.facebook.com/pages/Adora-Art-Project-Fan-Club/837747369619420">
+                            <a href="https://www.facebook.com/pages/Adora-Art-Project-Fan-Club/837747369619420" target="_blank">
                                 <i class="fa fa-facebook fa-2x" style="margin-top: 14%;"></i>
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-1"></div>
                     <div class="col-md-3">
                         <div class="text-center square-link" style="width: 38px; height: 38px; margin-bottom: 5%; margin-top: 5%;">
                             <a href="https://twitter.com/AdoraLevin" target="_blank">
@@ -126,13 +130,25 @@
                 <li><a href="http://adoralevin.com/wp-content/uploads/2015/05/Mug_blue.png" class="category">Adora coffe mugs</a></li>
                 <li><a href="http://adoralevin.com/wp-content/uploads/2015/05/Mouse_blue.png" class="category">Adora mouse pad</a></li>
                 <li><span class="parent_category">Adora Shirts</span><br/>
-                    <a href="http://www.zazzle.com/songs_for_five_year_olds_shirts-235945995068783534" class="subcategory">Female T-Shirt</a><br/>
-                    <a href="http://www.zazzle.com/songs_for_five_year_olds_shirts_mens_t_shirt-235479052345941175" class="subcategory">Male T-Shirt</a><br/></li>
+                    <a href="http://www.zazzle.com/songs_for_five_year_olds_shirts-235945995068783534" class="subcategory">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/dot.png" style="width:10px; margin-right: 3%; margin-bottom: 1%;"/>Female T-Shirt
+                    </a><br/>
+                    <a href="http://www.zazzle.com/songs_for_five_year_olds_shirts_mens_t_shirt-235479052345941175" class="subcategory">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/dot.png" style="width:10px; margin-right: 3%; margin-bottom: 1%;"/>Male T-Shirt
+                    </a><br/>
+                </li>
                 <li><a href="http://www.zazzle.com/songs_for_five_year_olds_shirts_tote_bag-149398615970097273" class="category">Adora Tote bag</a><br/></li>
                 <li><span class="parent_category">Art Cards</span><br/>
-                    <a href="http://adoralevin.com/shop/?add-to-cart=203" class="subcategory">6 Movie posters Adora</a><br/>
-                    <a href="" class="subcategory">6 November 2012 Adora</a><br/>
-                    <a href="http://adoralevin.com/shop/?add-to-cart=209" class="subcategory">I love Dad greeting card</a><br/></li>
+                    <a href="http://adoralevin.com/shop/?add-to-cart=203" class="subcategory">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/dot.png" style="width:10px; margin-right: 3%; margin-bottom: 1%;"/>6 Movie posters Adora
+                    </a><br/>
+                    <a href="" class="subcategory">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/dot.png" style="width:10px; margin-right: 3%; margin-bottom: 1%;"/>6 November 2012 Adora
+                    </a><br/>
+                    <a href="http://adoralevin.com/shop/?add-to-cart=209" class="subcategory">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/dot.png" style="width:10px; margin-right: 3%; margin-bottom: 1%;"/>I love Dad greeting card
+                    </a><br/>
+                </li>
                 <li><a href="http://adoralevin.com/wp-content/uploads/2015/05/Dorian_blue.png" class="category">Original Adora art</a></li>
             </ul>
         </div>
