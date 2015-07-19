@@ -3,37 +3,72 @@
 <?php if(!is_product()  && !( is_home()) && !(is_archive())) {?>
     <div class="footer">
         <div style="float: left;">
-            <a href="mailto:hanan@adoralevin.com">
-                <img class="email_icon" src="http://adoralevin.com/wp-content/uploads/2015/05/connect_bb.png" alt="Contact me"/>
-            </a>
+            <div class="text-center square-link" style="padding-top: 11%;">
+                <a href="mailto:hanan@adoralevin.com">
+                    <i class="fa fa-envelope fa-2x"></i>
+                </a>
+            </div>
         </div>
         <!--<div style="float: right; width: 360px;">-->
-        <div class="social_container" style="float: right; width: 90%;">
-            <a href="https://instagram.com/adoralevin/" target="_blank">
-                <img class="social_icon" src="http://adoralevin.com/wp-content/uploads/2015/07/instagram_blue_2.png" alt="Instagram" title="Instagram"/>
-            </a>
-            <a href="https://www.facebook.com/pages/Adora-Art-Project-Fan-Club/837747369619420">
-                <img class="social_icon" src="http://adoralevin.com/wp-content/uploads/2015/07/facebook_blue_2.png" alt="Facebook" title="Facebook"/>
-            </a>
-            <a href="https://twitter.com/AdoraLevin" target="_blank">
-                <img class="social_icon" src="http://adoralevin.com/wp-content/uploads/2015/07/twitter_blue_2.png" alt="Twitter" title="Twitter"/>
-            </a>
-
-            <a href="https://www.youtube.com/user/growabrain" target="_blank">
-                <img class="social_icon" src="http://adoralevin.com/wp-content/uploads/2015/07/youtube_blue_2.png" alt="Youtube" title="YouTube"/>
-            </a>
-            <a href="https://vimeo.com/user27307021" target="_blank">
-                <img class="social_icon" src="http://adoralevin.com/wp-content/uploads/2015/07/vimeo_blue_2.png" alt="Vimeo" title="Vimeo"/>
-            </a>
-            <a href="https://soundcloud.com/adorasdad" target="_blank">
-                <img class="social_icon" src="http://adoralevin.com/wp-content/uploads/2015/07/soundcloud_blue_2.png" alt="Soundcloud" title="Soundlcoud"/>
-            </a>
-            <a href="https://www.flickr.com/photos/60289418@N03/favorites/" target="_blank">
-                <img class="social_icon" src="http://adoralevin.com/wp-content/uploads/2015/07/flickr_blue_2.png" alt="Flickr" title="Flickr"/>
-            </a>
-            <a href="http://abcbanana123.deviantart.com/favourites/" target="_blank">
-                <img class="social_icon" src="http://adoralevin.com/wp-content/uploads/2015/07/deviantart_blue_2.png" alt="Deviant Art" title="Deviant Art"/>
-            </a>
+        <div class="social_container row" style="float: right; width: 90%;">
+            <container>
+                <div class="col-md-1">
+                    <div class="text-center square-link" style="padding-top: 10%">
+                        <a href="https://instagram.com/adoralevin/" target="_blank">
+                            <i class="fa fa-instagram fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="text-center square-link" style="padding-top: 7%;">
+                        <a href="https://www.facebook.com/pages/Adora-Art-Project-Fan-Club/837747369619420" target="_blank">
+                            <i class="fa fa-facebook fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="text-center square-link" style="padding-top: 10%;">
+                        <a href="https://twitter.com/AdoraLevin" target="_blank">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="text-center square-link" style="padding-top: 6%;">
+                        <a href="https://www.youtube.com/user/growabrain" target="_blank">
+                            <i class="fa fa-youtube fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="text-center square-link" style="padding-top: 10%;">
+                        <a href="https://vimeo.com/user27307021" target="_blank">
+                            <i class="fa fa-vimeo-square fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="text-center square-link" style="padding-top: 5%;">
+                        <a href="https://soundcloud.com/adorasdad" target="_blank">
+                            <i class="fa fa-soundcloud fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="text-center square-link" style="padding-top: 11%;">
+                        <a href="https://www.flickr.com/photos/60289418@N03/favorites/" target="_blank">
+                            <i class="fa fa-flickr fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="text-center square-link" style="padding-top: 6%;">
+                        <a href="http://abcbanana123.deviantart.com/favourites/" target="_blank">
+                            <i class="fa fa-deviantart fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </container>
         </div>
     </div>
 <?php }
@@ -83,4 +118,14 @@ if ( is_home() ) {?>
     </div>
 <?php } ?>
 </body>
+
+<style>
+    .footer .square-link{
+        width: 40px;
+        height: 40px;
+    }
+    .footer .col-md-2{
+        padding-left: 5%;
+    }
+</style>
 </html>

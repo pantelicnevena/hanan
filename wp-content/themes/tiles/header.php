@@ -89,22 +89,25 @@
         <div class="shop_subheader row">
             <div class="container">
                 <div class="col-md-9"></div>
-                <div class="col-md-3">
-                    <div class="col-md-4">
+                <div class="col-md-3" style="margin-right: -10%;">
+
+                    <div class="col-md-3">
                         <div class="text-center square-link" style="width: 38px; height: 38px; margin-bottom: 5%; margin-top: 5%;">
                             <a href="mailto:hanan@adoralevin.com">
                                 <i class="fa fa-envelope fa-2x" style="margin-top: 9%;"></i>
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3">
                         <div class="text-center square-link" style="width: 38px; height: 38px; margin-bottom: 5%; margin-top: 5%;">
                             <a href="https://www.facebook.com/pages/Adora-Art-Project-Fan-Club/837747369619420">
                                 <i class="fa fa-facebook fa-2x" style="margin-top: 14%;"></i>
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3">
                         <div class="text-center square-link" style="width: 38px; height: 38px; margin-bottom: 5%; margin-top: 5%;">
                             <a href="https://twitter.com/AdoraLevin" target="_blank">
                                 <i class="fa fa-twitter fa-2x" style="margin-top: 12%;"></i>
@@ -184,4 +187,5 @@
                 </div>
             </div>
         </div>
+
     <?php }?>
