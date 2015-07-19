@@ -37,6 +37,7 @@
         </div>
     </div>
 <?php }
+
 if ( is_home() ) {?>
     <div class="footer row" style="text-align: center; padding-top: 5px; margin-left: 0;">
         <div class="container">
