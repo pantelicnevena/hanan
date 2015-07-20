@@ -1,4 +1,4 @@
-
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
 
 /*
 Theme Name: Tiles
@@ -177,7 +177,6 @@ a:hover {
 #logo h1 {
 	font-weight: 900;
 	font-size: 40px;
-	color: #333;
 	text-transform: none;
 	text-decoration: none;
 	font-family: 'Open Sans', arial, helvetica, sans-serif;
@@ -336,11 +335,10 @@ a.menu-button {
 	width: 190px;
 	padding-left: 5px;
 	background: none;
-	border: none;
 	height: 30px;
 	margin-top: 10px;
 	border: solid 1px #fff;
-	font-family: 'Open Sans', arial, helvetica;
+	font-family: 'Open Sans', arial, helvetica, serif;
 	font-weight: 400;
 	color: #666;
 }
@@ -604,7 +602,6 @@ p.singletags:before {
 
 #rightbar ul li a {
 	border: none;
-	text-decoration: none;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -644,7 +641,6 @@ p.singletags:before {
 }
 
 #commentform h3 {
-	font-size: 10pt;
 	font-weight: 400;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -801,7 +797,7 @@ ol.commentlist a {
 }
 
 cite {
-	font-family: arial, verdana, tahoma;
+	font-family: arial, verdana, tahoma, serif;
 	font-size: 9pt;
 	font-weight: bold;
 	font-style: normal;
@@ -1132,7 +1128,6 @@ a.googleplusicon:before {
 }
 
 /*  ** IZMENA ** */
-@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
 
 a{
     outline: 0;
@@ -1201,7 +1196,7 @@ hr{
 }
 
 #header{
-    background: none repeat scroll 0% 0% #F08894;
+    background: none repeat scroll 0 0 #F08894;
 }
 
 .post{
@@ -1299,7 +1294,7 @@ body.home #header{
     padding-right: 15px;
     max-height: 50px;
     position: fixed;
-    bottom: 0%;
+    bottom: 0;
 }
 
 .products{
@@ -1557,10 +1552,6 @@ body.blog #header, body.blog #header2{
 }
 
 #header_opposites {
-    padding-left: 64px;
-    padding-right: 1.5%;
-
-    height: 145vh;
     text-align: center;
     -webkit-transform: translateZ(0);
 }
@@ -1579,11 +1570,6 @@ body.blog #contentwrapper{
 .opposites_cover{
 	text-align: center;
 	padding-bottom: 2%;
-}
-
-.opposites_cover img{
-	width: 100%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .opposites_cover span{
@@ -1698,7 +1684,7 @@ iframe {
 .archive,  .archive h3{
     background-image: none !important;
     background-color: white;
-    font-family: Times New Roman;
+	font-family: 'Times New Roman', serif;
     font-weight: 600;
 }
 
@@ -1790,14 +1776,6 @@ iframe {
     background-color: #53ffdb;
 }
 
-.author-underline{
-    border-bottom: 3px solid #ef9a9a;
-    box-shadow: 0 -5px 0 #ef9a9a inset;
-    color: inherit;
-    text-decoration: none;
-    transition: border-bottom-width 0.15s cubic-bezier(0.33, 0.66, 0.66, 1) 0s;
-    font-weight: 900;
-}
 
 .square-link {
     background-color: #54ffdb;
@@ -1811,41 +1789,6 @@ iframe {
 .square-link a {
 }
 
-.likes-counter{
-    position: absolute;
-    bottom: -25px;
-    right: 0;
-}
-.vote-btn{
-    color: white;
-    position: absolute;
-    right: 48px;
-}
-.counter-desc{
-    padding-right: 16px;
-    padding-left: 48px;
-    float: right;
-    font-size: 36px;
-    background-color: #fff;
-}
-
-.demo-card-wide{
-    width: 100%;
-    margin-bottom: 16px;
-}
-
-.demo-card-wide > .mdl-card__title {
-    position: relative;
-    color: #EE1C25;
-    font-weight: 900;
-    text-shadow:
-    -1px -1px 0 #fff,
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-    1px 1px 0 #fff;
-    height: 100px;
-    background: url('./images/kolaz.jpg') center / cover;
-}
 
 /*a {
     color: #EE1C25;
@@ -1872,7 +1815,7 @@ iframe {
 .woocommerce-checkout #contentwrapper
 {
     width: 95%;
-    padding-left: 0%;
+    padding-left: 0;
 }
 
 /*TODO add to element (subheader)*/

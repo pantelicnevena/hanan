@@ -28,8 +28,9 @@ function tiles_scripts_styles() {
             wp_enqueue_script( 'tiles-color-finder', get_template_directory_uri() . '/js/colorfinder-1.1.js', array( 'jquery' ), '', true );
             wp_enqueue_script( 'tiles-grid-scroll', get_template_directory_uri() . '/js/gridScrollFx.js', array( 'jquery' ), '', true );
         }
-        wp_enqueue_script( 'tiles-menu-script', get_template_directory_uri() . '/js/tendina.js', array( 'jquery' ), '', true );
-        wp_enqueue_script( 'tiles-mobilemenu-script', get_template_directory_uri() . '/js/mobilemenu.js', array( 'jquery' ), '', true );
+        wp_enqueue_script('tiles-menu-script', get_template_directory_uri() . '/js/tendina.js', array( 'jquery' ), '', true );
+        wp_enqueue_script('tiles-mobilemenu-script', get_template_directory_uri() . '/js/mobilemenu.js', array( 'jquery' ), '', true );
+        wp_enqueue_script('material-design-js', get_template_directory_uri().'/js/material.min.js', array());
         wp_enqueue_style('tiles-font-opensans', '//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', array(), '1', 'screen');
         wp_enqueue_style('tiles-arvo-font', '//fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic', array(), '1', 'screen');
         wp_enqueue_style('tiles-custom-style', get_template_directory_uri().'/custom.css', array(), '1', 'screen');

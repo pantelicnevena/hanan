@@ -1,0 +1,116 @@
+.opposites-title{
+    font-family: 'Lobster', Georgia, Times, serif;
+    font-size: 150px;
+    /*line-height: 180px;*/
+    color: rgb(229,57,53);
+    align-items: center;
+    text-shadow: 2px 2px #000000;
+}
+
+.opposites-title img {
+    height: 150px;
+}
+
+.opposites-subtitle{
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    font-size: 48px;
+}
+
+.opposites-description {
+    margin-top: 16px;
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+.opposites-sub-title{
+    font-family: 'Lobster', Georgia, Times, serif;
+    color: rgb(229,57,53);
+    font-size: 32px;
+}
+
+.opposites-lyric-title{
+    font-family: 'Lobster', Georgia, Times, serif;
+    color: rgb(229,57,53);
+    font-size: 32px;
+    text-shadow: 1px 1px #333;
+}
+
+
+
+.demo-card-wide{
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.demo-card-wide > .mdl-card__title {
+    position: relative;
+    color: #EE1C25;
+    text-shadow:
+    -2px -2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff;
+    height: 100px;
+    background: url('./images/kolaz.jpg') center / cover;
+}
+
+.likes-counter{
+    position: absolute;
+    bottom: -28px;
+    right: 0;
+    /*border: solid 1px #000;*/
+}
+.vote-btn{
+    color: white;
+
+}
+
+.vote-btn-background{
+    float: right;
+
+    background: -webkit-linear-gradient(left,rgba(255,255,255,0) 50%, rgba(255,255,255,1) 51%); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right,rgba(255,255,255,0) 50%, rgba(255,255,255,1) 51%); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right,rgba(255,255,255,0) 50%,rgba(255,255,255,1)51%); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 51%); /*Standard*/
+
+}
+
+.counter-desc{
+    padding: 0 16px;
+    float: right;
+    font-size: 36px;
+    background-color: #fff;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.author-underline{
+    border-bottom: 2px solid #ef9a9a;
+    box-shadow: 0 -3px 0 #ef9a9a inset;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    font-weight: 900;
+}
+
+.author-underline:hover{
+    text-decoration: none;
+    border-bottom: 2px solid #b71c1c;
+    border-top: 2px solid #b71c1c;
+    box-shadow: 0 -3px 0 #b71c1c inset;
+    background-color: #b71c1c ;
+    transition: all 0.25s ease;
+    color: white;
+}
+
+.layout-transparent .mdl-layout__header,
+.layout-transparent .mdl-layout__drawer-button,
+.mdl-navigation__link{
+    /* This background is dark, so we set text to white. Use 87% black instead if
+       your background is light. */
+    color: black;
+}
+
+.footer-btn {
+    color: #ffffff;
+}

@@ -17,7 +17,14 @@
         <?php wp_title('|',true,'right'); ?>
     </title>
     <?php wp_head(); ?>
-
+    <?php
+    if (is_home()){
+        ?>
+        <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+    <?php
+    }
+    ?>
 </head>
 
 
@@ -158,22 +165,26 @@
 
 
     <?php if(is_home() ) {?>
+
+
         <div class="opposites_cover">
-            <div class="jumbotron" style="padding-top: 0; padding-bottom: 0; margin-bottom: 0px !important">
-                <img src="http://adoralevin.com/wp-content/uploads/2015/07/Opposites.png" alt="Cover image">
-                <!--        <img src="http://adoralevin.com/wp-content/uploads/2015/07/tumblr_static_apyekj7a014oswkgc408gkcw4.jpg" alt="Cover image"/>-->
-            </div>
             <div>
+                <h1 class="opposites-title">
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/vinyl-logo.png" alt=""/>
+                    Opposites
+                </h1>
                 <!--<h1>OPPOSITES</h1>-->
-                <h2 style="margin-bottom: 1.5%; font-size: 38px; font-weight: 600;">Lyrics by Adora Levin & Hanan Levin</h2>
-        <span><b>When Adora was 4 years old, we started composing little songs together.
-                <br>In the past 18 months, we wrote about 40 songs, and published one book.</b></span><br>
-                <span><b>Many of these songs had been put to music by musicians from around the world.</b></span><br>
-                <span><b>The song “Opposites“ was interpreted in 6 different styles.</b></span><br>
-                <span><b>Now you can vote for the versions you like. No registration needed.</b></span>
+                <h2 class="opposites-subtitle">Lyrics by Adora Levin & Hanan Levin</h2>
+                <p class="opposites-description">
+                    When Adora was 4 years old, we started composing little songs together. <br>
+                    In the past 18 months, we wrote about 40 songs, and published one book. <br>
+                    Many of these songs had been put to music by musicians from around the world. <br>
+                    The song “Opposites“ was interpreted in 6 different styles. <br>
+                    Now you can vote for the versions you like. No registration needed. <br>
+                </p>
+
             </div>
         </div>
-        <hr>
 
     <?php }?>
 

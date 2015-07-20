@@ -96,13 +96,13 @@ class ZillaLikes {
 		if( !isset($options['add_to_other']) ) $options['add_to_other'] = '0';
 		
 		echo '<input type="hidden" name="zilla_likes_settings[add_to_posts]" value="0" />
-		<label><input type="checkbox" name="zilla_likes_settings[add_to_posts]" value="1"'. (($options['add_to_posts']) ? ' checked="checked"' : '') .' />
+		<label><input type="checkbox" name="zilla_likes_settings[add_to_posts]" value="1" '. (($options['add_to_posts']) ? ' checked="checked"' : '') .' />
 		'. __('Posts', 'zillalikes') .'</label><br />
 		<input type="hidden" name="zilla_likes_settings[add_to_pages]" value="0" />
-		<label><input type="checkbox" name="zilla_likes_settings[add_to_pages]" value="1"'. (($options['add_to_pages']) ? ' checked="checked"' : '') .' />
+		<label><input type="checkbox" name="zilla_likes_settings[add_to_pages]" value="1" '. (($options['add_to_pages']) ? ' checked="checked"' : '') .' />
 		'. __('Pages', 'zillalikes') .'</label><br />
 		<input type="hidden" name="zilla_likes_settings[add_to_other]" value="0" />
-		<label><input type="checkbox" name="zilla_likes_settings[add_to_other]" value="1"'. (($options['add_to_other']) ? ' checked="checked"' : '') .' />
+		<label><input type="checkbox" name="zilla_likes_settings[add_to_other]" value="1" '. (($options['add_to_other']) ? ' checked="checked"' : '') .' />
 		'. __('Blog Index Page, Archive Pages, and Search Results', 'zillalikes') .'</label><br />';
 	}
 	
@@ -121,7 +121,7 @@ class ZillaLikes {
 		if( !isset($options['disable_css']) ) $options['disable_css'] = '0';
 		
 		echo '<input type="hidden" name="zilla_likes_settings[disable_css]" value="0" />
-		<label><input type="checkbox" name="zilla_likes_settings[disable_css]" value="1"'. (($options['disable_css']) ? ' checked="checked"' : '') .' />' . __('I want to use my own CSS styles', 'zillalikes') . '</label>';
+		<label><input type="checkbox" name="zilla_likes_settings[disable_css]" value="1" '. (($options['disable_css']) ? ' checked="checked"' : '') .' />' . __('I want to use my own CSS styles', 'zillalikes') . '</label>';
 		
 		// Shutterbug conflict warning
 		$theme_name = '';
@@ -138,7 +138,7 @@ class ZillaLikes {
 	    if( !isset($options['ajax_likes']) ) $options['ajax_likes'] = '0';
 	    
 	    echo '<input type="hidden" name="zilla_likes_settings[ajax_likes]" value="0" />
-		<label><input type="checkbox" name="zilla_likes_settings[ajax_likes]" value="1"'. (($options['ajax_likes']) ? ' checked="checked"' : '') .' />
+		<label><input type="checkbox" name="zilla_likes_settings[ajax_likes]" value="1" '. (($options['ajax_likes']) ? ' checked="checked"' : '') .' />
 		' . __('AJAX Like Counts on page load', 'zillalikes') . '</label><br />
 		<span class="description">'. __('If you are using a cacheing plugin, you may want to dynamically load the like counts via AJAX.', 'zillalikes') .'</span>';
 	}
@@ -286,7 +286,7 @@ class ZillaLikes {
 				
 				$likes++;
 				update_post_meta($post_id, '_zilla_likes', $likes);
-				setcookie('zilla_likes_'. $post_id, $post_id, time()*20, '/');
+				setcookie('zilla_likes_'. $post_id, $post_id, time()+86400, '/'); //one day!
 				
 				if( $likes == 0 ) { $postfix = $zero_postfix; }
 				elseif( $likes == 1 ) { $postfix = $one_postfix; }
@@ -319,9 +319,11 @@ class ZillaLikes {
   
   		$class = 'zilla-likes';
   		$title = __('Like this', 'zillalikes');
+		$disabled = false;
 		if( isset($_COOKIE['zilla_likes_'. $post->ID]) ){
 			$class = 'zilla-likes active';
 			$title = __('You already like this', 'zillalikes');
+			$disabled = true;
 		}
 		/*
 		 *
@@ -333,11 +335,37 @@ class ZillaLikes {
                                 </div>
 		 *
 		 */
+		$return_value  = '<div class="likes-counter">';
+
+		$return_value .='<div id="counter-desc-'. $post->ID .'" class="counter-desc">'. $output .'</div>';
+		$return_value .= '<div class="vote-btn-background">';
+		$return_value .= 	'<button id="zilla-likes-'. $post->ID .'" title="'. $title;
+		$return_value .=		'" class="mdl-button mdl-js-ripple-effect mdl-js-button ';
+		$return_value .=		'mdl-button--fab mdl-color--red vote-btn '. $class;
+
+		if(!$disabled){
+			$return_value .= ' mdl-color--red ';
+		}
+		$return_value .= '" ';
+
+		if($disabled){
+			$return_value .= 'disabled="disabled"';
+		}
+
+		$return_value .= '>';
+		$return_value .= '<i class="fa fa-heart fa-lg"></i></button>';
+		$return_value .= '</div>';
+		$return_value .= '</div>';
+		return $return_value;
+/*
 		return '<div class="likes-counter">'
-            .'<button id="zilla-likes-'. $post->ID .'" title="'. $title .'" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--red vote-btn '. $class .'" >'
+            .'<button id="zilla-likes-'. $post->ID .'" title="'. $title
+			.'" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--red vote-btn '
+			. $class .'" disabled="'.$disabled.'">'
             .'<i class="fa fa-heart fa-lg"></i></button>'
-            .'<div class="counter-desc">'. $output .'</div></div>';
+            .'<div id="counter-desc-'. $post->ID .'" class="counter-desc">'. $output .'</div></div>';
 			//'<a href="#" class="'. $class .'" id="zilla-likes-'. $post->ID .'" title="'. $title .'">'. $output .'</a>';
+*/
 	}
 	
     function body_class($classes) {
@@ -383,8 +411,8 @@ class ZillaLikes_Widget extends WP_Widget {
 		$display_count = $instance['display_count'];
 
 		// Output our widget
-		echo $before_widget;
-		if( !empty( $title ) ) echo $before_title . $title . $after_title;
+		//echo $before_widget;
+		//if( !empty( $title ) ) echo $before_title . $title . $after_title;
 
 		if( $desc ) echo '<p>' . $desc . '</p>';
 
@@ -409,7 +437,7 @@ class ZillaLikes_Widget extends WP_Widget {
 		}
 		echo '</ul>';
 
-		echo $after_widget;
+		//echo $after_widget;
 	}
 
 	function update( $new_instance, $old_instance ) {

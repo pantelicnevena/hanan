@@ -1,4 +1,3 @@
-</div>
 <?php wp_footer(); ?>
 <?php if(!is_product()  && !( is_home()) && !(is_archive())) {?>
     <div class="footer">
@@ -11,7 +10,7 @@
         </div>
         <!--<div style="float: right; width: 360px;">-->
         <div class="social_container row" style="float: right; width: 90%;">
-            <container>
+            <div class="container">
                 <div class="col-md-1">
                     <div class="text-center square-link" style="padding-top: 10%">
                         <a href="https://instagram.com/adoralevin/" target="_blank">
@@ -68,12 +67,58 @@
                         </a>
                     </div>
                 </div>
-            </container>
+            </div>
         </div>
     </div>
 <?php }
 
 if ( is_home() ) {?>
+
+    <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer--left-section">
+            <div class="mdl-logo">&copy; 2015 adoralevin. All rights reserved</div>
+        </div>
+        <div class="mdl-mini-footer--right-section">
+            <ul class="mdl-mini-footer--link-list">
+                <li>
+                    <button
+                        class="mdl-button mdl-js-button mdl-button--fab
+                        mdl-js-ripple-effect mdl-color--teal-500 footer-btn mdl-button--mini-fab"
+                        onclick="location.href='mailto:hanan@adoralevin.com'">
+                        <i class="fa fa-envelope fa-fw"></i>
+                    </button>
+                </li>
+                <li>
+                    <button
+                        class="mdl-button mdl-js-button mdl-button--fab
+                        mdl-js-ripple-effect mdl-color--teal-500 footer-btn mdl-button--mini-fab"
+                        onclick="location.href='https://instagram.com/adoralevin/'">
+                        <i class="fa fa-instagram fa-fw"></i>
+                    </button>
+                </li>
+                <li>
+                    <button
+                        class="mdl-button mdl-js-button mdl-button--fab
+                        mdl-js-ripple-effect mdl-color--teal-500 footer-btn mdl-button--mini-fab"
+                        onclick="location.href='https://www.facebook.com/pages/Adora-Art-Project-Fan-Club/837747369619420'">
+                        <i class="fa fa-facebook fa-fw"></i>
+                    </button>
+                </li>
+                <li>
+                    <button
+                        class="mdl-button mdl-js-button mdl-button--fab
+                        mdl-js-ripple-effect mdl-color--teal-500 footer-btn mdl-button--mini-fab"
+                        onclick="location.href='https://twitter.com/AdoraLevin'">
+                        <i class="fa fa-twitter fa-fw"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <!--
     <div class="footer row" style="text-align: center; padding-top: 5px; margin-left: 0;">
         <div class="container">
             <div class="col-md-1">
@@ -116,6 +161,9 @@ if ( is_home() ) {?>
             </div>
         </div>
     </div>
+    -->
+
+
 <?php } ?>
 </body>
 
