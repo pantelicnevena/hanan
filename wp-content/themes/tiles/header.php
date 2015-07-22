@@ -22,7 +22,8 @@
         ?>
         <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
-    <?php
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <?php
     }
     ?>
 </head>
@@ -97,7 +98,7 @@
             <div class="container">
                 <div class="col-md-9"></div>
                 <div class="col-md-3" style="margin-right: -10%;">
-		    <div class="col-md-3">
+                    <div class="col-md-3">
                         <div class="text-center square-link" style="width: 38px; height: 38px; margin-bottom: 5%; margin-top: 5%;">
                             <a href="http://adoralevin.com" target="_blank">
                                 <img src="http://localhost/web/hanan/wp-content/uploads/2015/07/logo-icon.png" alt="Home page"/>
@@ -166,53 +167,50 @@
 
     <?php if(is_home() ) {?>
 
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--red-900">
+            <div class="mdl-layout__header-row">
 
-        <div class="opposites_cover">
-            <div>
-                <h1 class="opposites-title">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/vinyl-logo.png" alt=""/>
-                    Opposites
-                </h1>
-                <!--<h1>OPPOSITES</h1>-->
-                <h2 class="opposites-subtitle">Lyrics by Adora Levin & Hanan Levin</h2>
-                <p class="opposites-description">
-                    When Adora was 4 years old, we started composing little songs together. <br>
-                    In the past 18 months, we wrote about 40 songs, and published one book. <br>
-                    Many of these songs had been put to music by musicians from around the world. <br>
-                    The song “Opposites“ was interpreted in 6 different styles. <br>
-                    Now you can vote for the versions you like. No registration needed. <br>
-                </p>
-
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link cabin-font" href="">Home</a>
+                    <a class="mdl-navigation__link cabin-font" href="">Shop</a>
+                    <a class="mdl-navigation__link cabin-font" href="">Link</a>
+                    <a class="mdl-navigation__link cabin-font" href="">Link</a>
+                </nav>
             </div>
-        </div>
+        </header>
 
-    <?php }?>
 
-    <?php if(!is_home() ) {?>
-        <div id="header2">
-            <a class="menu-button" id="open-button" style="text-align: center; margin-left: 5%"></a>
-            <a id="logo2" href="http://adoralevin.com">
-                <img src="http://adoralevin.com/wp-content/uploads/2015/05/logo_original_white_circle_100.png" style="margin-top: 3px" alt="Logo"/>
-            </a>
-            <!--<div id="logo2" style="position: relative;"> <a href="<?php /*echo esc_url( home_url( '/' ) ); */?>" title="<?php /*echo esc_attr( get_bloginfo( 'name', 'display' ) ); */?>" rel="home">
+        <?php }?>
+
+        <?php if(!is_home() ) {?>
+            <div id="header2">
+                <a class="menu-button" id="open-button" style="text-align: center; margin-left: 5%"></a>
+                <a id="logo2" href="http://adoralevin.com">
+                    <img src="http://adoralevin.com/wp-content/uploads/2015/05/logo_original_white_circle_100.png" style="margin-top: 3px" alt="Logo"/>
+                </a>
+                <!--<div id="logo2" style="position: relative;"> <a href="<?php /*echo esc_url( home_url( '/' ) ); */?>" title="<?php /*echo esc_attr( get_bloginfo( 'name', 'display' ) ); */?>" rel="home">
                 <?php /*if (get_theme_mod( 'logo_img' )) : */?>
                     <img src="<?php /*echo esc_url (get_theme_mod( 'logo_img')); */?>">
                 <?php /*endif; */?>
             </a>
         </div>-->
 
-            <div id="mainmenu1">
-                <div class="menu-main-menu-container">
-                    <ul id="menu-main-menu-2" class="mainnav">
-                        <li class="icon-art"><a href="http://growabrain.tumblr.com/" target="_blank">Art Blog</a></li>
-                        <li class="icon-book"><a href="http://www.amazon.com/Songs-Five-Year-Hanan-Levin/dp/1312715995/" target="_blank">My Book</a></li>
-                        <li class="icon-songs"><a href="http://growabrain.tumblr.com/tagged/songs-we-wrote" target="_blank">My Songs</a></li>
-                        <li class="icon-sites"><a href="http://adoralevin.com/sites/" target="_blank">All My Sites</a></li>
-                        <li class="icon-buy"><a href="http://adoralevin.com/shop/" target="_blank">Shop</a></li>
-                        <li class="icon-forum"><a href="http://adoralevin.com/forum/" target="_blank">Community</a></li>
-                    </ul>
+                <div id="mainmenu1">
+                    <div class="menu-main-menu-container">
+                        <ul id="menu-main-menu-2" class="mainnav">
+                            <li class="icon-art"><a href="http://growabrain.tumblr.com/" target="_blank">Art Blog</a></li>
+                            <li class="icon-book"><a href="http://www.amazon.com/Songs-Five-Year-Hanan-Levin/dp/1312715995/" target="_blank">My Book</a></li>
+                            <li class="icon-songs"><a href="http://growabrain.tumblr.com/tagged/songs-we-wrote" target="_blank">My Songs</a></li>
+                            <li class="icon-sites"><a href="http://adoralevin.com/sites/" target="_blank">All My Sites</a></li>
+                            <li class="icon-buy"><a href="http://adoralevin.com/shop/" target="_blank">Shop</a></li>
+                            <li class="icon-forum"><a href="http://adoralevin.com/forum/" target="_blank">Community</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    <?php }?>
+        <?php }?>

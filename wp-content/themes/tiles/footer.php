@@ -1,4 +1,4 @@
-<?php wp_footer(); ?>
+
 <?php if(!is_product()  && !( is_home()) && !(is_archive())) {?>
     <div class="footer">
         <div style="float: left;">
@@ -74,7 +74,7 @@
 
 if ( is_home() ) {?>
 
-    <footer class="mdl-mini-footer">
+    <footer class="mdl-mini-footer mdl-color--red-900 opposites-footer">
         <div class="mdl-mini-footer--left-section">
             <div class="mdl-logo">&copy; 2015 adoralevin. All rights reserved</div>
         </div>
@@ -115,56 +115,12 @@ if ( is_home() ) {?>
             </ul>
         </div>
     </footer>
-
-
-
-    <!--
-    <div class="footer row" style="text-align: center; padding-top: 5px; margin-left: 0;">
-        <div class="container">
-            <div class="col-md-1">
-
-                <div class="text-center square-link" >
-                    <a href="mailto:hanan@adoralevin.com">
-                        <i class="fa fa-envelope fa-2x"></i>
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="col-md-8">
-                <span class="footer_span text-center" style="font-size: 20px;">
-                This is part of The Adora Art Project
-                </span>
-            </div>
-
-            <div class="col-md-1">
-                <div class="text-center square-link" >
-
-                    <a href="https://instagram.com/adoralevin/" target="_blank">
-                        <i class="fa fa-instagram fa-2x"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-1">
-                <div class="text-center square-link" >
-                    <a href="https://www.facebook.com/pages/Adora-Art-Project-Fan-Club/837747369619420">
-                        <i class="fa fa-facebook fa-2x"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-1">
-                <div class="text-center square-link" >
-                    <a href="https://twitter.com/AdoraLevin" target="_blank">
-                        <i class="fa fa-twitter fa-2x"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-
+</main>
+<!-- MDL end of layout -->
+</div>
 
 <?php } ?>
+<?php wp_footer(); ?>
 </body>
 
 <style>

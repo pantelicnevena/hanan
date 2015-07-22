@@ -19,13 +19,14 @@
 .opposites-description {
     margin-top: 16px;
     font-family: 'Cabin', Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .opposites-sub-title{
     font-family: 'Lobster', Georgia, Times, serif;
     color: rgb(229,57,53);
-    font-size: 32px;
+    font-size: 48px;
+    font-weight: 600;
 }
 
 .opposites-lyric-title{
@@ -34,8 +35,6 @@
     font-size: 32px;
     text-shadow: 1px 1px #333;
 }
-
-
 
 .demo-card-wide{
     width: 100%;
@@ -50,7 +49,6 @@
     2px -2px 0 #fff,
     -2px 2px 0 #fff,
     2px 2px 0 #fff;
-    height: 100px;
     background: url('./images/kolaz.jpg') center / cover;
 }
 
@@ -113,4 +111,17 @@
 
 .footer-btn {
     color: #ffffff;
+}
+
+.opposites-footer{
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+.cabin-font{
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+.mdl-navigation__link{
+    font-size: 16px;
+    font-weight: 600;
 }
