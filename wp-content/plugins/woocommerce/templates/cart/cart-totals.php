@@ -18,17 +18,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<h2><?php _e( 'Cart Totals', 'woocommerce' ); ?></h2>
 
-	<table cellspacing="0">
-
-		<tr class="cart-subtotal">
-			<th><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
+	<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 100%;">
+		<tr>
+			<th class="mdl-data-table__cell--non-numeric"><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
 			<td><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
 			<tr class="cart-discount coupon-<?php echo esc_attr( $code ); ?>">
-				<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
-				<td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
+				<th class="mdl-data-table__cell--non-numeric"><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
+				<td class="mdl-data-table__cell--non-numeric"><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
 			</tr>
 		<?php endforeach; ?>
 
@@ -42,8 +41,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php elseif ( WC()->cart->needs_shipping() ) : ?>
 
-			<tr class="shipping">
-				<th><?php _e( 'Shipping', 'woocommerce' ); ?></th>
+			<tr>
+				<th class="mdl-data-table__cell--non-numeric"><?php _e( 'Shipping', 'woocommerce' ); ?></th>
 				<td><?php woocommerce_shipping_calculator(); ?></td>
 			</tr>
 
@@ -75,7 +74,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
 		<tr class="order-total">
-			<th><?php _e( 'Total', 'woocommerce' ); ?></th>
+			<th class="mdl-data-table__cell--non-numeric"><?php _e( 'Total', 'woocommerce' ); ?></th>
 			<td><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 
@@ -95,11 +94,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?></small></p>
 	<?php endif; ?>
 
-	<div class="wc-proceed-to-checkout">
-
+	<div class="wc-proceed-to-checkout" style="float: right;">
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
-
 	</div>
+	<div class="clearfix"></div>
 
 	<?php do_action( 'woocommerce_after_cart_totals' ); ?>
 

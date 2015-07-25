@@ -29,6 +29,9 @@ switch( $template ) {
 	case 'twentyfifteen' :
 		echo '<div id="primary" role="main" class="content-area twentyfifteen"><div id="main" class="site-main t15wc">';
 		break;
+    case 'tiles' :
+        echo '<div class="mdl-grid">';
+        break;
 	default :
 		echo '<div id="contentwrapper"><div id="content" role="main">';
 		break;

@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <tr class="shipping">
-	<th><?php
+	<th class="mdl-data-table__cell--non-numeric"><?php
 		if ( $show_package_details ) {
 			printf( __( 'Shipping #%d', 'woocommerce' ), $index + 1 );
 		} else {

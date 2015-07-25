@@ -1143,7 +1143,7 @@ if ( ! function_exists( 'woocommerce_button_proceed_to_checkout' ) ) {
 		$checkout_url = WC()->cart->get_checkout_url();
 
 		?>
-		<a href="<?php echo $checkout_url; ?>" class="checkout-button button alt wc-forward"><?php _e( 'Proceed to Checkout', 'woocommerce' ); ?></a>
+		<a href="<?php echo $checkout_url; ?>" class="alt wc-forward mdl-button mdl-js-button mdl-button--raised mdl-button--accent"><?php _e( 'Proceed to Checkout', 'woocommerce' ); ?></a>
 		<?php
 	}
 }

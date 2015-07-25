@@ -41,7 +41,36 @@ if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % 3 || 1 == $woocommerce_loop['colum
 if ( 0 == $woocommerce_loop['loop'] % 3 ) {
 	$classes[] = 'last';
 }
+array_push($classes, 'mdl-cell');
+array_push($classes, 'mdl-cell--4-col');
+array_push($classes, 'mdl-card');
+array_push($classes, 'mdl-shadow--4dp');
+array_push($classes, 'shop-card');
+
 ?>
+
+<div <?php post_class( $classes ); ?>>
+
+	<?php do_action( 'woocommerce_before_shop_loop_item_title' );?>
+	<div class="mdl-card__supporting-text">
+		<a href="<?php print_r($product->add_to_cart_url())?>">
+			<h3><?php the_title(); ?></h3>
+		</a>
+	</div>
+	<div class="mdl-card__actions mdl-card--border">
+		<a href="<?php print_r($product->add_to_cart_url())?>" class="mdl-button mdl-js-button mdl-button--raised mdl-color--teal-500 mdl-color-text--white shop-button">
+			Buy
+		</a>
+
+		<?php do_action( 'woocommerce_after_shop_loop_item_title' ); ?>
+	</div>
+
+</div>
+
+
+
+<!--
+
 <li <?php post_class( $classes ); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
@@ -49,38 +78,39 @@ if ( 0 == $woocommerce_loop['loop'] % 3 ) {
 	 <a href="<?php print_r($product->add_to_cart_url())?>">
 
 		<?php
-			/**
-			 * woocommerce_before_shop_loop_item_title hook
-			 *
-			 * @hooked woocommerce_show_product_loop_sale_flash - 10
-			 * @hooked woocommerce_template_loop_product_thumbnail - 10
-			 */
-			do_action( 'woocommerce_before_shop_loop_item_title' );
-		?>
+/**
+ * woocommerce_before_shop_loop_item_title hook
+ *
+ * @hooked woocommerce_show_product_loop_sale_flash - 10
+ * @hooked woocommerce_template_loop_product_thumbnail - 10
+ */
+do_action( 'woocommerce_before_shop_loop_item_title' );
+?>
 
 		<h3><?php the_title(); ?></h3>
 
 		<?php
-			/**
-			 * woocommerce_after_shop_loop_item_title hook
-			 *
-			 * @hooked woocommerce_template_loop_rating - 5
-			 * @hooked woocommerce_template_loop_price - 10
-			 */
-			do_action( 'woocommerce_after_shop_loop_item_title' );
-		?>
+/**
+ * woocommerce_after_shop_loop_item_title hook
+ *
+ * @hooked woocommerce_template_loop_rating - 5
+ * @hooked woocommerce_template_loop_price - 10
+ */
+do_action( 'woocommerce_after_shop_loop_item_title' );
+?>
 
 	</a>
 
 	<?php
 
-		/**
-		 * woocommerce_after_shop_loop_item hook
-		 *
-		 * @hooked woocommerce_template_loop_add_to_cart - 10
-		 */
-		do_action( 'woocommerce_after_shop_loop_item' );
+/**
+ * woocommerce_after_shop_loop_item hook
+ *
+ * @hooked woocommerce_template_loop_add_to_cart - 10
+ */
+do_action( 'woocommerce_after_shop_loop_item' );
 
-	?>
+?>
 
 </li>
+-->

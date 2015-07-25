@@ -27,12 +27,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			}
 		?>
-
-		<h3 id="ship-to-different-address">
-			<label for="ship-to-different-address-checkbox" class="checkbox"><?php _e( 'Ship to a different address?', 'woocommerce' ); ?></label>
-			<input id="ship-to-different-address-checkbox" class="input-checkbox" <?php checked( $ship_to_different_address, 1 ); ?> type="checkbox" name="ship_to_different_address" value="1" />
-		</h3>
-
+        <div id="ship-to-different-address" style="margin-top: ">
+			<label for="ship-to-different-address-checkbox" class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+			    <input id="ship-to-different-address-checkbox" class="mdl-switch__input" <?php checked( $ship_to_different_address, 1 ); ?> type="checkbox" name="ship_to_different_address" value="1" />
+                <span class="mdl-switch__label"><?php _e( 'Ship to a different address?', 'woocommerce' ); ?></span>
+            </label>
+        </div>
 		<div class="shipping_address">
 
 			<?php do_action( 'woocommerce_before_checkout_shipping_form', $checkout ); ?>

@@ -120,6 +120,8 @@ if ( is_home() ) {?>
 </div>
 
 <?php } ?>
+
+
 <?php wp_footer(); ?>
 </body>
 

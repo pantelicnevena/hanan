@@ -3,9 +3,12 @@
     font-size: 150px;
     /*line-height: 180px;*/
     color: rgb(229,57,53);
+    text-decoration: none;
     align-items: center;
     text-shadow: 2px 2px #000000;
 }
+
+
 
 .opposites-title img {
     height: 150px;
@@ -124,4 +127,96 @@
 .mdl-navigation__link{
     font-size: 16px;
     font-weight: 600;
+}
+
+
+
+/**
+    Shop
+*/
+
+.cover-image-shop{
+    background: rgb(229,57,53);
+    background: url('./images/kolaz.jpg') center / cover;
+    text-align: center;
+}
+
+.shop-title a{
+    font-family: 'Lobster', Georgia, Times, serif;
+    font-size: 150px;
+    /*line-height: 180px;*/
+    color: rgb(255, 64, 129);
+    text-decoration: none;
+    text-align: center;
+    text-shadow:
+    -5px -3px 0 #000,
+    5px -3px 0 #000,
+    -5px 3px 0 #000,
+    5px 3px 0 #000;
+}
+
+.shop-title{
+    text-decoration: none;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mdl-card {
+    margin-bottom: 32px;
+}
+.mdl-card__supporting-text h3{
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+.shop-card img {
+    width: 100%;
+}
+
+.shop-button {
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+.mdl-card--border .price{
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+.woocommerce div.product {
+    margin-bottom: 16px;
+}
+
+.attachment-shop_catalog .wp-post-image{
+
+}
+
+.shop-sidebar{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    height: 100%;
+    max-height: 100%;
+
+    box-sizing: border-box;
+    border-right: 1px solid rgb(224,224,224);
+    background: rgb(250,250,250);
+
+    align-items: stretch;
+    padding: 16px;
+
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+.shop-sidebar .mdl-navigation__link {
+    display: block;
+    flex-shrink: 0;
+    padding: 16px;
+    margin: 0;
+    border-radius: 1px;
+    transition: all 0.25s ease;
+}
+
+.shop-sidebar .mdl-navigation__link:hover {
+    background: rgb(189,189,189);
+    transition: all 0.25s ease;
 }

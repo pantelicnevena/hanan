@@ -23,22 +23,22 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 // filter hook for include new pages inside the payment method
 $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_checkout_url() ); ?>
+<div class="mdl-gird">
 
-<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( $get_checkout_url ); ?>" enctype="multipart/form-data">
+
+<form name="checkout" method="post" class="checkout woocommerce-checkout " action="<?php echo esc_url( $get_checkout_url ); ?>" enctype="multipart/form-data">
 
 	<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>
 
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
-
-		<div class="col2-set" id="customer_details">
-			<div class="col-1">
-				<?php do_action( 'woocommerce_checkout_billing' ); ?>
-			</div>
-
-			<div class="col-2">
-				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-			</div>
-		</div>
+        <div class="mdl-grid mdl-shadow--4dp" id="customer_details">
+            <div class="mdl-cell mdl-cell--6-col">
+                <?php do_action( 'woocommerce_checkout_billing' ); ?>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col">
+                <?php do_action( 'woocommerce_checkout_shipping' ); ?>
+            </div>
+        </div>
 
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
@@ -55,5 +55,6 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->g
 	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 
 </form>
+</div>
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

@@ -17,15 +17,11 @@
         <?php wp_title('|',true,'right'); ?>
     </title>
     <?php wp_head(); ?>
-    <?php
-    if (is_home()){
-        ?>
-        <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <?php
-    }
-    ?>
+
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 
 
@@ -35,63 +31,57 @@
     <button class="close-button" id="close-button">Close Menu</button>
 </div>
 
+<?php if(!is_product() && !is_archive()) {?>
 <div id="container">
-    <?php if(!is_product() && !is_archive()) {?>
-        <div id="header">
-            <div id="logo" style="position: relative;"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                    <?php if (get_theme_mod( 'logo_img' )) : ?>
-                        <img src="<?php echo esc_url (get_theme_mod( 'logo_img')); ?>" alt="Logo"/>
-                    <?php endif; ?>
-                    <div id="site-description">
-                        <?php bloginfo( 'description' ); ?>
-                    </div>
+    <div id="header">
+        <div id="logo" style="position: relative;"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                <?php if (get_theme_mod( 'logo_img' )) : ?>
+                    <img src="<?php echo esc_url (get_theme_mod( 'logo_img')); ?>" alt="Logo"/>
+                <?php endif; ?>
+                <div id="site-description">
+                    <?php bloginfo( 'description' ); ?>
+                </div>
+            </a>
+        </div>
+
+        <div id="mainmenu">
+            <div class="menu-main-menu-container">
+                <ul id="menu-main-menu-2" class="mainnav">
+                    <li class="icon-art"><a href="http://growabrain.tumblr.com/" target="_blank">Art Blog</a></li>
+                    <li class="icon-book"><a href="http://www.amazon.com/Songs-Five-Year-Hanan-Levin/dp/1312715995/" target="_blank">My Book</a></li>
+                    <li class="icon-songs"><a href="http://growabrain.tumblr.com/tagged/songs-we-wrote" target="_blank">My Songs</a></li>
+                    <li class="icon-sites"><a href="http://adoralevin.com/sites/" target="_blank">All My Sites</a></li>
+                    <li class="icon-buy"><a href="http://adoralevin.com/shop/" target="_blank">Shop</a></li>
+                    <li class="icon-forum"><a href="http://adoralevin.com/forum/" target="_blank">Community</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Start of StatCounter Code for Default Guide -->
+        <script type="text/javascript">
+            var sc_project=10453760;
+            var sc_invisible=0;
+            var sc_security="0120b437";
+            var scJsHost = (("https:" == document.location.protocol) ?
+                "https://secure." : "http://www.");
+            document.write("<sc"+"ript type='text/javascript' src='" + scJsHost + "statcounter.com/counter/counter.js'></"+"script>");
+        </script>
+
+        <noscript>
+            <div id="statcounter_image" class="statcounter">
+                <a title="hit counter" href="http://statcounter.com/" target="_blank">
+                    <img class="statcounter" src="http://c.statcounter.com/10453760/0/0120b437/0/" alt="hit counter">
                 </a>
             </div>
+        </noscript>
+        <!-- End of StatCounter Code for Default Guide -->
 
-            <div id="mainmenu">
-                <div class="menu-main-menu-container">
-                    <ul id="menu-main-menu-2" class="mainnav">
-                        <li class="icon-art"><a href="http://growabrain.tumblr.com/" target="_blank">Art Blog</a></li>
-                        <li class="icon-book"><a href="http://www.amazon.com/Songs-Five-Year-Hanan-Levin/dp/1312715995/" target="_blank">My Book</a></li>
-                        <li class="icon-songs"><a href="http://growabrain.tumblr.com/tagged/songs-we-wrote" target="_blank">My Songs</a></li>
-                        <li class="icon-sites"><a href="http://adoralevin.com/sites/" target="_blank">All My Sites</a></li>
-                        <li class="icon-buy"><a href="http://adoralevin.com/shop/" target="_blank">Shop</a></li>
-                        <li class="icon-forum"><a href="http://adoralevin.com/forum/" target="_blank">Community</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Start of StatCounter Code for Default Guide -->
-            <script type="text/javascript">
-                var sc_project=10453760;
-                var sc_invisible=0;
-                var sc_security="0120b437";
-                var scJsHost = (("https:" == document.location.protocol) ?
-                    "https://secure." : "http://www.");
-                document.write("<sc"+"ript type='text/javascript' src='" + scJsHost + "statcounter.com/counter/counter.js'></"+"script>");
-            </script>
-
-            <noscript>
-                <div id="statcounter_image" class="statcounter">
-                    <a title="hit counter" href="http://statcounter.com/" target="_blank">
-                        <img class="statcounter" src="http://c.statcounter.com/10453760/0/0120b437/0/" alt="hit counter">
-                    </a>
-                </div>
-            </noscript>
-            <!-- End of StatCounter Code for Default Guide -->
-
-        </div>
+    </div>
     <?php } ?>
 
 
     <!--SHOP PAGE-->
-    <?php if (is_archive() || is_page('Cart') || is_product() || is_page('Checkout')) {?>
-        <!--HEADER-->
-        <div class="jumbotron" style="padding-top: 0; padding-bottom: 0;">
-            <a href="http://adoralevin.com/shop">
-                <img src="http://adoralevin.com/wp-content/uploads/2015/07/Estore.png" alt="Cover image" style="width:100%;">
-            </a>
-        </div>
+    <?php if (is_archive() || is_page('cart') || is_product() || is_page('checkout')) {?>
 
         <!--SUBHEADER-->
         <div class="shop_subheader row">
@@ -187,6 +177,7 @@
         <?php }?>
 
         <?php if(!is_home() ) {?>
+        <div id="container">
             <div id="header2">
                 <a class="menu-button" id="open-button" style="text-align: center; margin-left: 5%"></a>
                 <a id="logo2" href="http://adoralevin.com">
