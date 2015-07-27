@@ -142,7 +142,7 @@
 }
 
 .shop-title a{
-    font-family: 'Lobster', Georgia, Times, serif;
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
     font-size: 150px;
     /*line-height: 180px;*/
     color: rgb(255, 64, 129);
@@ -219,4 +219,40 @@
 .shop-sidebar .mdl-navigation__link:hover {
     background: rgb(189,189,189);
     transition: all 0.25s ease;
+    color: #FF4081;
+}
+
+.mdl-card__supporting-text a{
+    transition: all 0.25s ease;
+}
+
+.mdl-card__supporting-text a:hover{
+    color: #009688;
+    transition: all 0.25s ease;
+}
+
+.panel-title {
+    text-decoration: underline;
+    font-size: large;
+}
+
+.shop-cart-desc {
+    font-size: medium;
+}
+
+.single-product-title{
+    text-shadow: none;
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+.summary.entry-summary p{
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+.tabs {
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+.image-icon{
+    height: 1.5em !important;
 }

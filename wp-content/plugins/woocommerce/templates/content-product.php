@@ -46,12 +46,15 @@ array_push($classes, 'mdl-cell--4-col');
 array_push($classes, 'mdl-card');
 array_push($classes, 'mdl-shadow--4dp');
 array_push($classes, 'shop-card');
+array_push($classes, 'mdl-cell--4-col');
 
 ?>
 
 <div <?php post_class( $classes ); ?>>
+	<a href="<?php print_r($product->add_to_cart_url())?>">
+		<?php do_action( 'woocommerce_before_shop_loop_item_title' );?>
+	</a>
 
-	<?php do_action( 'woocommerce_before_shop_loop_item_title' );?>
 	<div class="mdl-card__supporting-text">
 		<a href="<?php print_r($product->add_to_cart_url())?>">
 			<h3><?php the_title(); ?></h3>

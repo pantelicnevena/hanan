@@ -2,12 +2,12 @@
 /**
  * Created by PhpStorm.
  * User: enco
- * Date: 7/23/15
- * Time: 12:36 AM
+ * Date: 7/27/15
+ * Time: 4:12 PM
  */
 ?>
 
-<footer class="mdl-mini-footer mdl-color--teal-900 opposites-footer">
+<footer class="mdl-mini-footer mdl-color--teal-600 opposites-footer">
     <div class="mdl-mini-footer--left-section">
         <div class="mdl-logo">&copy; 2015 adoralevin. All rights reserved</div>
     </div>
@@ -51,7 +51,6 @@
 
 </main>
 </div>
-
 <?php wp_footer(); ?>
 </body>
 </html>

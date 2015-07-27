@@ -23,7 +23,7 @@ get_header( 'shop' ); ?>
 do_action( 'woocommerce_before_main_content' );
 ?>
 	<div class="mdl-grid">
-		<div class="mdl-cell--2-col"></div>
+		<div class="mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
 		<div class="mdl-cell--8-col">
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -31,7 +31,7 @@ do_action( 'woocommerce_before_main_content' );
 
 			<?php endwhile; // end of the loop. ?>
 		</div>
-		<div class="mdl-cell--2-col"></div>
+		<div class="mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
 	</div>
 
 

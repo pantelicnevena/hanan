@@ -16,7 +16,7 @@ wc_print_notices();
 do_action( 'woocommerce_before_cart' ); ?>
 
 <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--2-col"></div>
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
     <div class="mdl-cell mdl-cell--8-col">
 
         <form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
@@ -52,24 +52,21 @@ do_action( 'woocommerce_before_cart' ); ?>
                         </div>
                         <div class="mdl-card__supporting-text">
                             <div class="mdl-grid">
-                                <div class="mdl-cell mdl-cell--10-col">
-                                    <div class="mdl-grid">
-                                        <div class="mdl-cell mdl-cell--4-col">
-                                            <?php
-                                            $thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
-                                            if ( ! $_product->is_visible() ) {
-                                                echo $thumbnail;
-                                            } else {
-                                                printf( '<a href="%s">%s</a>', esc_url( $_product->get_permalink( $cart_item ) ), $thumbnail );
-                                            }
-                                            ?>
-                                        </div>
-                                        <div class="mdl-cell mdl-cell--8-col">
-                                            <?php /*print_r( $_product->get_post_data()->post_content)*/?> <!--This is Product description-->
-                                            <?php print_r( $_product->get_post_data()->post_excerpt)?> <!--This is Product short description-->
-                                        </div>
-                                    </div>
+                                <div class="mdl-cell mdl-cell--3-col">
+                                    <?php
+                                    $thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+
+                                    if ( ! $_product->is_visible() ) {
+                                        echo $thumbnail;
+                                    } else {
+                                        printf( '<a href="%s">%s</a>', esc_url( $_product->get_permalink( $cart_item ) ), $thumbnail );
+                                    }
+                                    ?>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col shop-cart-desc">
+                                    <?php /*print_r( $_product->get_post_data()->post_content)*/?> <!--This is Product description-->
+                                    <?php print_r( $_product->get_post_data()->post_excerpt)?> <!--This is Product short description-->
                                 </div>
                                 <div class="mdl-cell mdl-cell--2-col">
                                     <p>Price:
@@ -92,6 +89,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                                     <p>Total:
                                         <?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); ?></p>
                                 </div>
+
                             </div>
                         </div>
                         <div class="mdl-card__menu">
@@ -123,19 +121,19 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 
     </div>
-    <div class="mdl-cell mdl-cell--2-col"></div>
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
 
 
 
 
 
-    <div class="mdl-cell mdl-cell--6-col"></div>
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
     <div class="mdl-cell mdl-cell--4-col">
 
         <?php do_action( 'woocommerce_cart_collaterals' ); ?>
 
     </div>
-    <div class="mdl-cell mdl-cell--2-col"></div>
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
 
 
 

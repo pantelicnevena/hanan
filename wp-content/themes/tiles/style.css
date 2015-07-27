@@ -1496,7 +1496,7 @@ p.cart, form.cart {
 
 #tab-description, #tab-reviews{
     padding: 1% 2% 1% 3%;
-    font-family: "Laila",serif;
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
 
 #tab-description h2{
@@ -1537,7 +1537,6 @@ p.cart, form.cart {
 
 
 .summary.entry-summary p{
-    font-weight: 600;
     font-size: 18px;
 }
 
