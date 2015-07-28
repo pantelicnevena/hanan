@@ -80,7 +80,7 @@
         </div>
 
 
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--hide-tablet mdl-cell--hide-phone mdl-cell--middle ">
+        <div id="lyrics" class="mdl-cell mdl-cell--4-col mdl-cell--hide-tablet mdl-cell--hide-phone " style="float: right;" >
             <div id="header_opposites">
                 <h1 class="opposites-lyric-title">Lyrics by <br>Adora Levin <br>& Hanan Levin</h1>
                 <p class="opposites-description">

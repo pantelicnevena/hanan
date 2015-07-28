@@ -27,6 +27,8 @@ function tiles_scripts_styles() {
             wp_enqueue_script( 'tiles-classie-script', get_template_directory_uri() . '/js/classie.js', array( 'jquery' ), '', true );
             wp_enqueue_script( 'tiles-color-finder', get_template_directory_uri() . '/js/colorfinder-1.1.js', array( 'jquery' ), '', true );
             wp_enqueue_script( 'tiles-grid-scroll', get_template_directory_uri() . '/js/gridScrollFx.js', array( 'jquery' ), '', true );
+
+
         }
         wp_enqueue_script('tiles-menu-script', get_template_directory_uri() . '/js/tendina.js', array( 'jquery' ), '', true );
         wp_enqueue_script('tiles-mobilemenu-script', get_template_directory_uri() . '/js/mobilemenu.js', array( 'jquery' ), '', true );

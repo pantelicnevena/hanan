@@ -7,20 +7,12 @@
  */
 ?>
 
-<footer class="mdl-mini-footer mdl-color--teal-600 opposites-footer">
+<footer class="mdl-mini-footer mdl-layout__header--transparent">
     <div class="mdl-mini-footer--left-section">
-        <div class="mdl-logo">&copy; 2015 adoralevin. All rights reserved</div>
+        <div class="mdl-logo mdl-color-text--black post-charity">&copy; 2015 The Adora Levin Children Fund. All rights reserved.</div>
     </div>
     <div class="mdl-mini-footer--right-section">
         <ul class="mdl-mini-footer--link-list">
-            <li>
-                <button
-                    class="mdl-button mdl-js-button mdl-button--fab
-                        mdl-js-ripple-effect mdl-color--pink-A400 footer-btn mdl-button--mini-fab"
-                    onclick="location.href='mailto:hanan@adoralevin.com'">
-                    <i class="fa fa-envelope fa-fw"></i>
-                </button>
-            </li>
             <li>
                 <button
                     class="mdl-button mdl-js-button mdl-button--fab
@@ -49,7 +41,6 @@
     </div>
 </footer>
 
-</main>
 </div>
 <?php wp_footer(); ?>
 </body>

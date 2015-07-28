@@ -94,7 +94,7 @@
         </div>
         <header class="mdl-layout__header mdl-layout__header--scroll">
 
-            <div class="mdl-layout__header-row mdl-color--teal-900">
+            <div class="mdl-layout__header-row mdl-color--teal-700">
 
 
                 <div class="mdl-layout-spacer"></div>
@@ -107,11 +107,13 @@
                     <a class="mdl-navigation__link" href="<?php echo esc_url( home_url( '/shop' ) );?>">
                         <i class="fa fa-shopping-cart fa-lg"></i> Shop
                     </a>
-                    <a class="mdl-navigation__link" href="">
+                    <a class="mdl-navigation__link" href="<?php echo esc_url( home_url( '/opposites' ) );?>">
                         <img class="image-icon" src="<?php echo get_bloginfo('template_directory'); ?>/images/vinyl-logo.png" alt="">
                         Opposites
                     </a>
-                    <a class="mdl-navigation__link" href=""> Charity</a>
+                    <a class="mdl-navigation__link" href="<?php echo esc_url( home_url( '/charity' ) );?>">
+                        Charity
+                    </a>
                 </nav>
             </div>
 

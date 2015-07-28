@@ -128,7 +128,7 @@ if(!class_exists('WooCommerce_Direct_Checkout')){
 			$target_blank = $direct_checkout_continue_enabled ? '' : ' target="_blank"';
 			
 			if( $direct_checkout_continue_enabled ){
-				$html_button = '<a href="'.$additional_button_url.'" title="'.$single_product_title.'" style="margin:5px 0" class="button alt"'.$target_blank.'>'.$additional_button_text.'</a>';
+				$html_button = '<a href="'.$additional_button_url.'" title="'.$single_product_title.'" class="single_add_to_cart_button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" '.$target_blank.'>'.$additional_button_text.'</a>';
 				echo $html_button;
 			}	
 		}

@@ -7,7 +7,7 @@
  */
 ?>
 
-<footer class="mdl-mini-footer mdl-color--teal-900 opposites-footer">
+<footer class="mdl-mini-footer mdl-color--teal-700 opposites-footer">
     <div class="mdl-mini-footer--left-section">
         <div class="mdl-logo">&copy; 2015 adoralevin. All rights reserved</div>
     </div>

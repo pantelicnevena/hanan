@@ -28,34 +28,30 @@
 </head>
 
 
-<body <?php body_class(); ?> style="border-collapse:collapse; display : table;">
-<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
-    <main class="mdl-layout__content">
-        <div class="cover-image-shop ">
-            <h1 class="shop-title"><a href="<?php echo esc_url( home_url( '/shop' ) );?>"  class="mdl-color-text--teal-A200 ">Adora Levin's e-store</a></h1>
+<body>
+<div class="layout-transparent">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+
+            <div class="mdl-layout-spacer"></div>
+
+            <nav class="mdl-navigation mdl-color-text--black">
+                <a class="mdl-navigation__link mdl-color-text--black" href="<?php echo esc_url( home_url( '/' ) );?>">
+                    <img class="image-icon" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_original_white_circle.png" alt="">
+                    Home
+                </a>
+                <a class="mdl-navigation__link mdl-color-text--black" href="<?php echo esc_url( home_url( '/shop' ) );?>">
+                    <i class="fa fa-shopping-cart fa-lg"></i> Shop
+                </a>
+                <a class="mdl-navigation__link mdl-color-text--black" href="<?php echo esc_url( home_url( '/opposites' ) );?>">
+                    <img class="image-icon" src="<?php echo get_bloginfo('template_directory'); ?>/images/vinyl-logo.png" alt="">
+                    Opposites
+                </a>
+                <a class="mdl-navigation__link mdl-color-text--black" href="<?php echo esc_url( home_url( '/charity' ) );?>">
+                    Charity
+                </a>
+            </nav>
         </div>
-        <header class="mdl-layout__header mdl-layout__header--scroll">
 
-            <div class="mdl-layout__header-row mdl-color--teal-700">
-
-
-                <div class="mdl-layout-spacer"></div>
-
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="<?php echo esc_url( home_url( '/' ) );?>">
-                        <img class="image-icon" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_original_white_circle.png" alt="">
-                        Home
-                    </a>
-                    <a class="mdl-navigation__link" href="<?php echo esc_url( home_url( '/shop' ) );?>">
-                        <i class="fa fa-shopping-cart fa-lg"></i> Shop
-                    </a>
-                    <a class="mdl-navigation__link" href="">
-                        <img class="image-icon" src="<?php echo get_bloginfo('template_directory'); ?>/images/vinyl-logo.png" alt="">
-                        Opposites
-                    </a>
-                    <a class="mdl-navigation__link" href=""> Charity</a>
-                </nav>
-            </div>
-
-        </header>
+    </header>
 

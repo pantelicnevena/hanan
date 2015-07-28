@@ -256,3 +256,16 @@
 .image-icon{
     height: 1.5em !important;
 }
+
+.post-charity,
+.post-charity p,
+.post-charity a{
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    line-height: 1.8em;
+}
+
+.post-charity p,
+.post-charity a {
+    font-size: large;
+}

@@ -121,17 +121,26 @@ if ( is_home() ) {?>
 
 <?php } ?>
 
-
 <?php wp_footer(); ?>
-</body>
 
-<style>
-    .footer .square-link{
-        width: 40px;
-        height: 40px;
-    }
-    .footer .col-md-2{
-        padding-left: 5%;
-    }
-</style>
+<script type="text/javascript">
+    $(function() {
+        var offset = $("#lyrics").offset();
+        var topPadding = 15;
+        $(window).scroll(function() {
+            console.log('func scroll, offset: ' + offset);
+            if ($(window).scrollTop() > offset.top) {
+                console.log('vece od offseta');
+                $("#lyrics").stop().animate({
+                    marginTop: $(window).scrollTop() - offset.top + topPadding
+                });
+            } else {
+                $("#lyrics").stop().animate({
+                    marginTop: 0
+                });
+            };
+        });
+    });
+</script>
+</body>
 </html>
