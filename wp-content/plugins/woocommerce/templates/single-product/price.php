@@ -15,8 +15,13 @@ global $product;
 global $post;
 
 ?>
+
+
+
 <div itemprop="description">
-    <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
+    <?php //echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
+
+    <?php the_content(); ?>
 </div>
 
 <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">

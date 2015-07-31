@@ -21,7 +21,7 @@
 
 .opposites-description {
     margin-top: 16px;
-    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    font-family: 'Lobster', Georgia, Times, serif;
     font-size: 24px;
 }
 
@@ -149,10 +149,10 @@
     text-decoration: none;
     text-align: center;
     text-shadow:
-    -5px -3px 0 #000,
-    5px -3px 0 #000,
-    -5px 3px 0 #000,
-    5px 3px 0 #000;
+    -5px -3px 0 #fff,
+    5px -3px 0 #fff,
+    -5px 3px 0 #fff,
+    5px 3px 0 #fff;
 }
 
 .shop-title{
@@ -260,7 +260,7 @@
 .post-charity,
 .post-charity p,
 .post-charity a{
-    font-family: Roboto, sans-serif;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
     font-weight: 500;
     line-height: 1.8em;
 }

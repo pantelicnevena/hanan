@@ -58,6 +58,8 @@ array_push($classes, 'mdl-shadow--4dp');
                 do_action( 'woocommerce_single_product_summary' );
                 ?>
 
+
+
             </div><!-- .summary -->
 
         </div>
@@ -70,7 +72,7 @@ array_push($classes, 'mdl-shadow--4dp');
              * @hooked woocommerce_upsell_display - 15
              * @hooked woocommerce_output_related_products - 20
              */
-            do_action( 'woocommerce_after_single_product_summary' );
+            //do_action( 'woocommerce_after_single_product_summary' );
             ?>
 
         <meta itemprop="url" content="<?php the_permalink(); ?>" />

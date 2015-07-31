@@ -30,7 +30,7 @@
 <body <?php body_class(); ?> style="border-collapse:collapse; display : table;">
 
 
-<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
+<div class=" mdl-layout--overlay-drawer-button">
 <!--
     <header class="mdl-layout__header mdl-layout__header--scroll">
 
@@ -88,9 +88,8 @@
         </nav>
     </div>
 -->
-    <main class="mdl-layout__content">
         <div class="cover-image-shop ">
-            <h1 class="shop-title"><a href="<?php echo esc_url( home_url( '/shop' ) );?>"  class="mdl-color-text--teal-A200 ">Adora Levin's e-store</a></h1>
+            <h1 class="shop-title"><a href="<?php echo esc_url( home_url( '/shop' ) );?>"  class="mdl-color-text--teal-700 ">Adora Levin's e-store</a></h1>
         </div>
         <header class="mdl-layout__header mdl-layout__header--scroll">
 

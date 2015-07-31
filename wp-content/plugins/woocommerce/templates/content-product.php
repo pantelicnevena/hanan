@@ -15,6 +15,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product, $woocommerce_loop;
 
+
+
+ini_set("log_errors", 1);
+ini_set("error_log", "/tmp/php-error.log");
+
+global $post;
+$terms = get_the_terms( $post->ID, 'product_cat' );
+
+foreach ($terms as $term) {
+	$product_cat_id = $term->term_id;
+	error_log( $product_cat_id );
+	break;
+}
+
+$term = get_term_by( 'id', $product_cat_id, 'product_cat', 'ARRAY_A' );
+if ($term['name'] == 'donation') return;
+
+
 // Store loop count we're currently on
 if ( empty( $woocommerce_loop['loop'] ) ) {
 	$woocommerce_loop['loop'] = 0;
