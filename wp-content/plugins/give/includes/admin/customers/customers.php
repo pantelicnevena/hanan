@@ -297,12 +297,12 @@ function give_customers_view( $customer ) {
 
 										<?php if ( ! empty( $address ) ) { ?>
 											<span class="customer-address info-item editable">
-												<span class="info-item" data-key="line1"><?php echo $address['line1']; ?></span>
-												<span class="info-item" data-key="line2"><?php echo $address['line2']; ?></span>
-												<span class="info-item" data-key="city"><?php echo $address['city']; ?></span>
-												<span class="info-item" data-key="state"><?php echo $address['state']; ?></span>
-												<span class="info-item" data-key="country"><?php echo $address['country']; ?></span>
-												<span class="info-item" data-key="zip"><?php echo $address['zip']; ?></span>
+												<span class="info-item" data-key="line1"><?php echo $address['line1']; ?></span><br>
+												<span class="info-item" data-key="line2"><?php echo $address['line2']; ?></span><br>
+												<span class="info-item" data-key="city">City: <?php echo $address['city']; ?></span><br>
+												<span class="info-item" data-key="state">State: <?php echo $address['state']; ?></span><br>
+												<span class="info-item" data-key="country">Country: <?php echo $address['country']; ?></span><br>
+												<span class="info-item" data-key="zip">Zip: <?php echo $address['zip']; ?></span><br>
 											</span>
 										<?php } ?>
 										<span class="customer-address info-item edit-item">

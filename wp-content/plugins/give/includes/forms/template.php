@@ -482,7 +482,7 @@ function give_user_info_fields( $form_id ) {
 
 		</p>
 		<?php do_action( 'give_purchase_form_after_email', $form_id ); ?>
-
+		<?php do_action('give_after_cc_fields'); ?>
 		<?php do_action( 'give_purchase_form_user_info', $form_id ); ?>
 	</fieldset>
 	<?php
@@ -590,7 +590,7 @@ function give_default_cc_address_fields() {
 	$zip   = $logged_in && ! empty( $user_address['zip'] ) ? $user_address['zip'] : '';
 	ob_start(); ?>
 	<fieldset id="give_cc_address" class="cc-address">
-		<legend><?php _e( 'Billing Details', 'give' ); ?></legend>
+		<legend><?php _e( 'Adora art cards Receiving Details', 'give' ); ?></legend>
 		<?php do_action( 'give_cc_billing_top' ); ?>
 		<p id="give-card-address-wrap" class="form-row form-row-two-thirds">
 			<label for="card_address" class="give-label">
@@ -598,7 +598,7 @@ function give_default_cc_address_fields() {
 				<?php if ( give_field_is_required( 'card_address' ) ) { ?>
 					<span class="give-required-indicator">*</span>
 				<?php } ?>
-				<span class="give-tooltip give-icon give-icon-question" data-tooltip="<?php _e( 'The primary billing address for your credit card.', 'give' ); ?>"></span>
+
 			</label>
 
 			<input type="text" id="card_address" name="card_address" class="card-address give-input<?php if ( give_field_is_required( 'card_address' ) ) {
@@ -612,7 +612,7 @@ function give_default_cc_address_fields() {
 				<?php if ( give_field_is_required( 'card_address_2' ) ) { ?>
 					<span class="give-required-indicator">*</span>
 				<?php } ?>
-				<span class="give-tooltip give-icon give-icon-question" data-tooltip="<?php _e( '(optional) The suite, apt no, PO box, etc, associated with your billing address.', 'give' ); ?>"></span>
+
 			</label>
 
 			<input type="text" id="card_address_2" name="card_address_2" class="card-address-2 give-input<?php if ( give_field_is_required( 'card_address_2' ) ) {
@@ -626,7 +626,7 @@ function give_default_cc_address_fields() {
 				<?php if ( give_field_is_required( 'card_city' ) ) { ?>
 					<span class="give-required-indicator">*</span>
 				<?php } ?>
-				<span class="give-tooltip give-icon give-icon-question" data-tooltip="<?php _e( 'The city for your billing address.', 'give' ); ?>"></span>
+
 			</label>
 			<input type="text" id="card_city" name="card_city" class="card-city give-input<?php if ( give_field_is_required( 'card_city' ) ) {
 				echo ' required';
@@ -639,7 +639,7 @@ function give_default_cc_address_fields() {
 				<?php if ( give_field_is_required( 'card_zip' ) ) { ?>
 					<span class="give-required-indicator">*</span>
 				<?php } ?>
-				<span class="give-tooltip give-icon give-icon-question" data-tooltip="<?php _e( 'The zip or postal code for your billing address.', 'give' ); ?>"></span>
+
 			</label>
 
 			<input type="text" size="4" name="card_zip" class="card-zip give-input<?php if ( give_field_is_required( 'card_zip' ) ) {
@@ -653,7 +653,6 @@ function give_default_cc_address_fields() {
 				<?php if ( give_field_is_required( 'billing_country' ) ) { ?>
 					<span class="give-required-indicator">*</span>
 				<?php } ?>
-				<span class="give-tooltip give-icon give-icon-question" data-tooltip="<?php _e( 'The country for your billing address.', 'give' ); ?>"></span>
 			</label>
 
 			<select name="billing_country" id="billing_country" class="billing-country billing_country give-select<?php if ( give_field_is_required( 'billing_country' ) ) {
@@ -681,7 +680,6 @@ function give_default_cc_address_fields() {
 				<?php if ( give_field_is_required( 'card_state' ) ) { ?>
 					<span class="give-required-indicator">*</span>
 				<?php } ?>
-				<span class="give-tooltip give-icon give-icon-question" data-tooltip="<?php _e( 'The state or province for your billing address.', 'give' ); ?>"></span>
 			</label>
 
 			<?php

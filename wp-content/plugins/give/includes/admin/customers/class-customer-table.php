@@ -126,7 +126,6 @@ class Give_Customer_Reports_Table extends WP_List_Table {
 			case 'date_created' :
 				$value = date_i18n( get_option( 'date_format' ), strtotime( $item['date_created'] ) );
 				break;
-
 			default:
 				$value = isset( $item[ $column_name ] ) ? $item[ $column_name ] : null;
 				break;
@@ -252,21 +251,23 @@ class Give_Customer_Reports_Table extends WP_List_Table {
 
 		$customers = Give()->customers->get_customers( $args );
 
+        ini_set("log_errors", 1);
+        ini_set("error_log", "/tmp/php-error.log");
 		if ( $customers ) {
 
-			foreach ( $customers as $customer ) {
+            foreach ( $customers as $customer ) {
 
 				$user_id = ! empty( $customer->user_id ) ? intval( $customer->user_id ) : 0;
 
-				$data[] = array(
+                $data[] = array(
 					'id'            => $customer->id,
 					'user_id'       => $user_id,
 					'name'          => $customer->name,
 					'email'         => $customer->email,
 					'num_purchases' => $customer->purchase_count,
 					'amount_spent'  => $customer->purchase_value,
-					'date_created'  => $customer->date_created,
-				);
+					'date_created'  => $customer->date_created
+                );
 			}
 		}
 
